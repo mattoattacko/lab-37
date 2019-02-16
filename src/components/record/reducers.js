@@ -5,10 +5,10 @@ export default (state = initialState, action) => {
 
   let { id, model, data } = payload;
   switch (type) {
-    case 'GET':
+    case "GET":
       return { ...state, [model]: data };
 
-    case 'POST':
+    case "POST":
       /*
       state: {
         teams: [ {}, {}],
@@ -30,21 +30,19 @@ export default (state = initialState, action) => {
     */
       return {
         ...state,
-        [model]: state[model] ? [...state[model], data] : [data],
+        [model]: state[model] ? [...state[model], data] : [data]
       };
 
-    case 'DELETE':
+    case "DELETE":
       let deleteList = state[model].filter(r => r._id !== id);
       return { ...state, [model]: deleteList };
 
-    case 'PUT':
-      let putList = state[model].map((entry, idx) =>
-        idx === id ? data : entry,
-      );
-      console.log('PUT', model, data, putList);
+    case "PUT":
+      let putList = state[model].map((entry, idx) => (idx === id ? data : entry));
+      console.log("PUT", model, data, putList);
       return { ...state, [model]: putList };
 
-    case 'PATCH':
+    case "PATCH":
       return state;
 
     default:

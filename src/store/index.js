@@ -1,14 +1,13 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
 
-import thunk from 'redux-thunk';
+import thunk from "redux-thunk";
 
-import recordsReducer from '../components/record/reducers.js';
+import recordsReducer from "../components/record/reducers.js";
 
 let reducers = combineReducers({
-  records: recordsReducer,
+  records: recordsReducer
 });
 
-const store = () =>
-  createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));
+const store = () => createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));
 export default store;
