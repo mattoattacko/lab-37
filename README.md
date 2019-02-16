@@ -8,7 +8,7 @@
 
 - [repo](https://github.com/mattoattacko/lab-37)
 - [back-end](https://codesandbox.io/s/jl895vnjo3)
-- [front-end](http://xyz.com)
+- [front-end](https://jl895vnjo3.codesandbox.io/)
 
 ### Modules
 
@@ -41,9 +41,7 @@ Usage Notes or examples
 
 #### Tests
 
-- How do you run tests?
-- What assertions were made?
-- What assertions need to be / should be made?
+- Tests currently failing. Getting assistance.
 
 #### UML
 
