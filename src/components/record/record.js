@@ -1,17 +1,17 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 
-import Form from 'react-jsonschema-form';
+import Form from "react-jsonschema-form";
 
-import * as api from '../../lib/api.js';
-import * as actions from './actions.js';
+import * as api from "../../lib/api.js";
+import * as actions from "./actions.js";
 
 // const API = 'http://localhost:3000';
-const API = 'https://javascript-401-api.herokuapp.com';
+const API = "https://javascript-401-api.herokuapp.com";
 
 const uiSchema = {
-  _id: { 'ui:widget': 'hidden' },
-  __v: { 'ui:widget': 'hidden' },
+  _id: { "ui:widget": "hidden" },
+  __v: { "ui:widget": "hidden" }
 };
 
 class Record extends React.Component {
@@ -39,13 +39,13 @@ class Record extends React.Component {
         url: url,
         id: this.props.id,
         model: this.props.model,
-        record: formData,
+        record: formData
       });
     } else {
       this.props.handlePost({
         url: url,
         model: this.props.model,
-        record: formData,
+        record: formData
       });
     }
   };
@@ -69,16 +69,16 @@ class Record extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  records: state.records,
+  records: state.records
 });
 
 const mapDispatchToProps = (dispatch, getState) => ({
   handlePost: payload => dispatch(actions.post(payload)),
   handlePut: payload => dispatch(actions.put(payload)),
-  handlePatch: payload => dispatch(actions.patch(payload)),
+  handlePatch: payload => dispatch(actions.patch(payload))
 });
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
+  mapDispatchToProps
 )(Record);

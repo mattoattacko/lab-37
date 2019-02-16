@@ -1,4 +1,4 @@
-import superagent from 'superagent';
+import superagent from "superagent";
 
 export const post = payload => dispatch => {
   return superagent
@@ -12,8 +12,8 @@ export const post = payload => dispatch => {
 
 const runPost = payload => {
   return {
-    type: 'POST',
-    payload: payload,
+    type: "POST",
+    payload: payload
   };
 };
 
@@ -29,8 +29,8 @@ export const get = payload => dispatch => {
 
 export const runGet = payload => {
   return {
-    type: 'GET',
-    payload: payload,
+    type: "GET",
+    payload: payload
   };
 };
 
@@ -39,17 +39,15 @@ export const put = payload => dispatch => {
     .put(payload.url)
     .send(payload.record)
     .then(data => {
-      dispatch(
-        runPut({ model: payload.model, id: payload.id, data: data.body }),
-      );
+      dispatch(runPut({ model: payload.model, id: payload.id, data: data.body }));
     })
     .catch(console.error);
 };
 
 const runPut = payload => {
   return {
-    type: 'PUT',
-    payload: payload,
+    type: "PUT",
+    payload: payload
   };
 };
 
@@ -66,7 +64,7 @@ export const destroy = payload => dispatch => {
 
 export const runDestory = payload => {
   return {
-    type: 'DELETE',
-    payload: payload,
+    type: "DELETE",
+    payload: payload
   };
 };

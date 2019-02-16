@@ -5,6 +5,7 @@ import style from "./record.module.scss";
 
 import Record from "./record.js";
 import If from "../if";
+import Auth from "../auth/auth.js";
 
 import * as actions from "./actions.js";
 
@@ -41,27 +42,37 @@ class Records extends React.Component {
     });
   }
 
+  //     <Auth capability="read">
+  //        <RecordList model="teams" />
+  //     </Auth>
+
   render() {
     let records = this.props.records[this.props.model] || [];
     console.log("r", this.props.model, records);
     return (
       <div className={style}>
         <h2>{this.props.model.toUpperCase()}</h2>
-        <button onClick={this.reset}>Add New</button>
+        <Auth capability="create">
+          <button onClick={this.reset}>Add New</button>
+        </Auth>
         <If condition={records}>
           <ul className={style.list}>
             {records.map((record, idx) => (
               <li key={idx}>
                 {record.name}
-                <button onClick={() => this.editRecord(idx)}>Edit</button>
-                <button onClick={() => this.deleteRecord(record._id)}>
-                  Delete
-                </button>
+                <Auth capability="create">
+                  <button onClick={() => this.editRecord(idx)}>Edit</button>
+                </Auth>
+                <Auth capability="delete">
+                  <button onClick={() => this.deleteRecord(record._id)}>Delete</button>
+                </Auth>
               </li>
             ))}
           </ul>
         </If>
-        <Record model={this.props.model} id={this.state.id} />
+        <Auth capability="create">
+          <Record model={this.props.model} id={this.state.id} />
+        </Auth>
       </div>
     );
   }
