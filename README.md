@@ -1,26 +1,50 @@
-# Implement Login and Authorization into an existing application
+# ![CF](http://i.imgur.com/7v5ASc8.png) LAB
 
-## Requirements
+## Project Name
 
-- Hide the entire interface until the user has logged in.
-- When a user logs in, add a "Log Out" link in the header
-- Implement the following RBAC rules:
+### Author: Student/Group Name
 
-1. Logged In Users with 'read' permissions can see the list of records
-2. Logged In Users with 'delete' permissions can delete records
-3. Logged In Users with 'update' permissions can edit existing records
-4. Logged In Users with 'create' permissions can create new records
+### Links and Resources
 
-## Notes
+- [repo](https://github.com/mattoattacko/lab-37)
+- [back-end](https://codesandbox.io/s/jl895vnjo3)
+- [front-end](http://xyz.com)
 
-- You may not alter the functionality of the existing application components.
-- You may only grant access using RBAC
-- The server has the following user accounts (username:password) that you can use to login as a user with varying permissions
-  admin:ADMIN (create, read, update, delete)
-  editor:EDITOR (create, read, update)
-  user:USER (read)
+### Modules
 
-## Testing
+#### `modulename.js`
 
-- Write a suite of UI tests that assert the existence of components based on user login state.
-- You will need to create some mocking interface to fake a server/login to simulate.
+##### Exported Values and Methods
+
+###### `foo(thing) -> string`
+
+Usage Notes or examples
+
+###### `bar(array) -> array`
+
+Usage Notes or examples
+
+### Setup
+
+#### `.env` requirements
+
+- `PORT` - Port Number
+- `MONGODB_URI` - URL to the running mongo instance/db
+
+#### Running the app
+
+- `npm start`
+- Endpoint: `/foo/bar/`
+  - Returns a JSON object with abc in it.
+- Endpoint: `/bing/zing/`
+  - Returns a JSON object with xyz in it.
+
+#### Tests
+
+- How do you run tests?
+- What assertions were made?
+- What assertions need to be / should be made?
+
+#### UML
+
+Link to an image of the UML for your application and response to events

@@ -7,7 +7,9 @@
   "dependencies": {
     "enzyme": "3.7.0",
     "enzyme-adapter-react-16": "1.7.0",
+    "jsonwebtoken": "8.4.0",
     "react": "16.6.3",
+    "react-cookies": "0.1.0",
     "react-dom": "16.6.3",
     "react-jsonschema-form": "1.0.6",
     "react-redux": "5.1.1",
