@@ -1,6 +1,5 @@
 import React from "react";
 import jwt from "jsonwebtoken";
-
 import { LoginContext } from "./context.js";
 import If from "../if/index.js";
 

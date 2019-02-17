@@ -1,5 +1,4 @@
 import React from "react";
-
 import RecordList from "./record/list.js";
 import Login from "./auth/login.js";
 import LoginContext from "./auth/context.js";

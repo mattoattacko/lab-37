@@ -41,7 +41,7 @@ Usage Notes or examples
 
 #### Tests
 
-- Tests currently failing. Getting assistance.
+- My Tests are currently in quantum superposition. They both pass and fail at the same time. Direct observation not recommended.
 
 #### UML
 
