@@ -1,10 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-
 import Form from "react-jsonschema-form";
-
 import * as api from "../../lib/api.js";
 import * as actions from "./actions.js";
+import record from "./record.module.scss";
 
 // const API = 'http://localhost:3000';
 const API = "https://javascript-401-api.herokuapp.com";

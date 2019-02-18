@@ -1,12 +1,12 @@
 # ![CF](http://i.imgur.com/7v5ASc8.png) LAB
 
-## Project Name
+## Lab 37 Login and Auth
 
-### Author: Student/Group Name
+### Author: Matt McQuain, et al.
 
 ### Links and Resources
 
-- [repo](https://github.com/mattoattacko/lab-37)
+- [Repo](https://github.com/mattoattacko/lab-37)
 - [back-end](https://codesandbox.io/s/jl895vnjo3)
 - [front-end](https://jl895vnjo3.codesandbox.io/)
 
